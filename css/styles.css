@@ -143,6 +143,8 @@ background-color: var(--accent-text-color);
 .item {
     transition-property: color;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    animation-duration: 250ms;
+
     color:rgba(117, 117, 117, 1);
 }
 .item:hover 
@@ -188,6 +190,7 @@ font-size: 36px;
  {
     transition-property:color;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        animation-duration: 250ms;
    cursor: pointer;
     font-weight: 500;
     line-height: 1.14;
@@ -204,6 +207,7 @@ text-decoration: none;
     cursor: pointer;
     transition-property: color;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        animation-duration: 250ms;
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
@@ -326,6 +330,7 @@ color: var(--secondary-accent-color);
     transition-property: background-color;
     transition-property: color;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        animation-duration: 250ms;
     font-weight: 700;
         font-size: 16px;
         line-height: 1.87;
@@ -382,14 +387,16 @@ background-color: #F5F4FA;
     position: relative;
 }
 .classes{
+    display: flex;
     position: absolute;
+    justify-content: center;
+    align-items: center;
     bottom:0;
     width: 370px;
     height: 70px;
     background-color: rgba(47, 48, 58, 0.8);
 }
 .textes{
-    margin-top:27px;
     font-style: normal;
     font-weight: 700;
         font-size: 14px;
@@ -497,9 +504,7 @@ margin-bottom: 16px;
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    transition-property: background-color;
-    transition-property: fill;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill , color , background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color:var(--secondary-text-color);
     fill: #AFB1B8;
     align-items: center;
@@ -516,7 +521,7 @@ margin-bottom: 16px;
 .partners {
     padding-top: 94px;
     padding-bottom: 94px;
-    background-color: #F5F5F5;
+    background-color: var(--secondary-text-color);
 }
 
 .clients {
@@ -540,12 +545,9 @@ margin-bottom: 16px;
     display: flex;
     width: 170px;
     height: 92px;
-    transition-property: fill;
-    transition-property: border-color;
-    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill, border-color  250ms cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid #AFB1B8;
         border-radius: 4px;
-        background-color: #F5F5F5;
             fill: #AFB1B8;
             align-items: center;
             justify-content: center;
@@ -590,8 +592,7 @@ transition-property: color;
    
    .footer-geo {
     cursor: pointer;
-    transition-property: color;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     line-height: 1.71;
     text-decoration: none;
     color: var(--secondary-text-color);
@@ -620,6 +621,7 @@ margin-top: 0;
 .bottom-container{
 
 display: flex;
+align-items: baseline;
 }
    .footer-link {
     display: inline-block;
@@ -661,8 +663,7 @@ display: flex;
     border-radius: 50%;
     align-items: center;
      justify-content: center;
-     transition-property: background-color;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color:rgba(255, 255, 255, 0.1);
     fill:#FFFFFF;  
 }
@@ -692,15 +693,7 @@ display: flex;
 _________________PORTFOLIO MAIN_________*/
  
  
-   .navigator-btn-item {
-      cursor: pointer;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.62;
-   background-color: var(--secondary-text-color);
-    color: var(--primary-text-color);
-  }
-
+  
 button {
     display: block;
 }
@@ -764,8 +757,13 @@ button {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     }
         .navigator-btn-item {
+            cursor: pointer;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 1.62;
             border-radius: 4px;
             border: none;
+            transition: color, box-shadow, background-color,border 250ms cubic-bezier(0.4, 0, 0.2, 1);
             padding-left: 22px;
             padding-right: 22px;
             padding-top: 6px;
@@ -773,6 +771,8 @@ button {
             font-weight: 500;
                 font-size: 16px;
                 line-height: 1.62;
+                background-color: var(--secondary-text-color);
+                    color: var(--primary-text-color);
             
         }
     
@@ -815,11 +815,7 @@ margin-bottom: 30px;
     margin-bottom: 0;
 }
 .img-touch {
-    transition-property: transform;
-    transition-property: opacity;
-    transition-property: box-shadow;
-    transition-property: color;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color, box-shadow, opacity , transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: block;
     text-decoration: none;
 }
